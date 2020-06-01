@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "dsc650"
+version = "0.1.0"
+description = ""
+authors = ["Shawn Hermans <shermans@bellevue.edu>"]
+license = "MIT"
+readme = "README.md"
+include = [
+    "README.md"
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pyspark = "^2.4.5"
+keras = "^2.3.1"
+pandas = "^1.0.3"
+pygal = "^2.4.0"
+pyarrow = "^0.17.0"
+jupyter = "^1.0.0"
+luigi = {version = "^2.8.13", extras = ["toml"]}
+protobuf = "^3.11.3"
+tensorflow = "^2.1.0"
+# See https://github.com/tensorflow/tensorflow/issues/37525
+tensorflow-estimator = "==2.1.0"
+pyyaml = "^5.3.1"
+tinydb = "^4.1.1"
+avro-python3 = "^1.9.2"
+jsonschema = "^3.2.0"
+beautifulsoup4 = "^4.9.1"
+dateparser = "^0.7.4"
+pyspark-stubs = "^2.4.0"
+pygeohash = "^1.2.0"
+fastavro = "^0.23.4"
+matplotlib = "^3.2.1"
+click = "^7.1.2"
+pillow = "^7.1.2"
+fastparquet = "^0.4.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.4.1"
+mkdocs = "^1.1"
+mkdocs-material = "^5.1.5"
+mkdocs-git-revision-date-localized-plugin = "^0.5.2"
+flake8 = "^3.7.9"
+mkdocs-minify-plugin = "^0.3.0"
+mkdocs-table-reader-plugin = "^0.2.0"
+tox = "^3.15.1"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
