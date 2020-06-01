@@ -1,0 +1,13 @@
+program: DSC
+course_number: 650
+course_section: ''
+instructor:
+  first_name: Shawn
+  last_name: Hermans
+  email: shermans@bellevue.edu
+student:
+  first_name: Jane
+  last_name: Doe
+  email: janedoe@example.com
+assignments_src_dir: dsc650/assignments
+submitted_assignments_dir: assignments

@@ -1,0 +1,10 @@
+﻿Value,Unit,Symbol,Notes
+$1$,Byte,B,1 byte = 1 letter in computer memory
+$10^{3}$ ,Kilobyte,kB,2 kB = RAM on original NES   
+$10^{6}$ ,Megabyte,MB,1 MB &thickapprox; 1 HD quality photo 
+$10^{9}$ ,Gigabyte,GB,1 GB &thickapprox; 114 minutes of uncompressed CD audio
+$10^{12}$ ,Terabyte,TB,1.9 TB &thickapprox; Size of all multimedia files used in English wikipedia on May 2012
+$10^{15}$ ,Petabyte,PB,10 PB &thickapprox; Size of Library of Congress collection in 2005 
+$10^{18}$ ,Exabyte,EB,15 EB &thickapprox; storage space at Google data warehouse as of 2013
+$10^{21}$ ,Zettabyte,ZB,6.9 ZB &thickapprox; amount of data accessed by Americans in 2012
+$10^{24}$ ,Yottabyte,YB,1 YB &thickapprox; 131 TB for every person on Earth

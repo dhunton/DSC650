@@ -1,0 +1,44 @@
+﻿Year,Country,Vendor,Computer,Performance,Units
+1938, Germany,Zuse,Z1,1,IPS
+1941, Germany,Zuse,Z3,20,IPS
+1946, United States,University of Pennsylvania,ENIAC,5,kIPS
+1951, United States,Massachusetts Institute of Technology,Whirlwind I,20,kIPS
+1958, United States,IBM,AN/FSQ-7,75,kIPS
+1960, United States,IBM,7090,229,kIPS
+1960, United States,UNIVAC,LARC,250,kIPS
+1961, United States,IBM,7030 Stretch,1.2,MIPS
+1962, United Kingdom,University of Manchester,Atlas,1,MFLOPS
+1964, United States,CDC,6600,3,MFLOPS
+1969, United States,CDC,7600,36,MFLOPS
+1974, United States,CDC,STAR-100,100,MFLOPS
+1976, United States,Cray,Cray-1,160,MFLOPS
+1983, United States,Cray,X-MP/4,713,MFLOPS
+1985, United States,Cray,Cray-2,1.41,GFLOPS
+1988, United States,Cray,Y-MP/832,2.14,GFLOPS
+1990, Japan,Fujitsu,VP2600/10,4,GFLOPS
+1992, Japan,NEC,SX-3/44,20,GFLOPS
+1993, United States,Thinking,CM-5/1024,59.7,GFLOPS
+1993, Japan,Fujitsu,Numerical Wind Tunnel,124.2,GFLOPS
+1994, United States,Intel,Paragon XP/S 140,143.4,GFLOPS
+1994, Japan,Fujitsu,Numerical Wind Tunnel,170,GFLOPS
+1996, Japan,Hitachi,SR2201,232.4,GFLOPS
+1996, Japan,Hitachi,CP-PACS,368.2,GFLOPS
+1997, United States,Intel,ASCI Red,1.06,TFLOPS
+2000, United States,IBM,ASCI White,4.93,TFLOPS
+2001, United States,IBM,ASCI White,7.2,TFLOPS
+2002, Japan,NEC,Earth Simulator,35.86,TFLOPS
+2004, United States,IBM,Blue Gene/L,70.72,TFLOPS
+2005, United States,IBM,Blue Gene/L,136.8,TFLOPS
+2005, United States,IBM,Blue Gene/L,280.6,TFLOPS
+2007, United States,IBM,Blue Gene/L,478.2,TFLOPS
+2008, United States,IBM,Roadrunner,1.02,PFLOPS
+2008, United States,IBM,Roadrunner,1.1,PFLOPS
+2009, United States,Cray,Jaguar,1.75,PFLOPS
+2010, China,National University of Defense Technology,Tianhe-1A,2.57,PFLOPS
+2011, Japan,Fujitsu,K computer,10.51,PFLOPS
+2012, United States,IBM,Sequoia (Blue Gene/Q),16.32,PFLOPS
+2012, United States,Cray,Titan,17.59,PFLOPS
+2013, China,National University of Defense Technology,Tianhe-2,33.86,PFLOPS
+2016, China,NRCPC,Sunway TaihuLight,93.01,PFLOPS
+2018, United States,IBM,Summit,122.3,PFLOPS
+2019, United States,IBM,Summit,148.6,PFLOPS
