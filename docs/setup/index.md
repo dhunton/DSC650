@@ -4,8 +4,6 @@
     Check back soon for more updates.
     
 ---
-
-- [ ] Add `dsc650` as source root
     
 ## Operating System Dependencies
 

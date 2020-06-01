@@ -7,21 +7,25 @@
 
 ## System
 
-Edit `/etc/hosts`:
+**Edit `/etc/hosts`**:
 
 ```shell
 127.0.0.1 hostname
 ```
     
+**Install JDK, Scala and Git**:
+    
 ```shell
 sudo apt install default-jdk scala git -y
 ```
+
+**Install Poetry**:
     
 ```shell
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3
 ```
     
-## JDK
+**Install Oracle JDK**:
 
 ```shell
 sudo apt update
@@ -32,30 +36,35 @@ sudo apt install oracle-java8-installer oracle-java8-set-default
     
 ## Spark
 
-https://phoenixnap.com/kb/install-spark-on-ubuntu
+This [guide](https://phoenixnap.com/kb/install-spark-on-ubuntu) provides more information on how to setup Spark on Ubuntu. 
+
+Start by downloading Spark 2.4.5 for Hadoop 2.7. 
 
 ```shell
 curl -O https://www.apache.org/dyn/closer.lua/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz
 ```
 
-Extract
+Extract the archive. 
 
 ```shell
 tar xvf spark-2.4.5-bin-hadoop2.7.tgz
 ```
 
-Move it
+Move it to `/opt/spark`.
 
 ```shell
 sudo mv spark-2.4.5-bin-hadoop2.7/ /opt/spark
 ```
 
-Set environment
+Update the environment variables by adding the following to your shell profile.  
 
 ```shell 
 export SPARK_HOME=/opt/spark
 export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
+export PYSPARK_PYTHON=/usr/bin/python3
 ```
+
+Alternatively, add it to your profile using `echo`. 
 
 ```shell 
 echo "export SPARK_HOME=/opt/spark" >> ~/.profile
@@ -63,30 +72,32 @@ echo "export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin" >> ~/.profile
 echo "export PYSPARK_PYTHON=/usr/bin/python3" >> ~/.profile
 ```
 
-Activate changes
+This assumes your profile is in `.profile`. It may also be in another location like `~/.bashrc` or `~/.zshrc`.  Activate your changes as follows. 
 
 ```shell
 source ~/.bashrc
 ```
 
-Start a stand-alone server
+Start a stand-alone server. 
 
 ```shell
 start-master.sh
 ```
 
-The process will listen on 8080
+The process will listen on 8080. 
 
 ```shell
 ss -tunelp | grep 8080
 tcp   LISTEN  0       1                           *:8080  
 ```
 
-Go to web UI
+Start a worker process. 
 
 ```shell
 start-slave.sh spark://ubuntu:7077
 ```
+
+You can stop the processes using the following commands. 
 
 ```shell
 stop-slave.sh
@@ -105,11 +116,11 @@ sudo apt install python3-venv
     If you have a dedicated NVIDIA GPU and want to take advantage of its processing power, instead of tensorflow install the tensorflow-gpu package which includes GPU support.
 
 ### GPU Support
-    
-[cuda-gpus][cuda-gpus]
-    
-    
-[TensorFlow GPU Install][tensorflow-gpu-install]
+
+Check the following links to more information on GPU support. 
+
+* [CUDA GPUs][cuda-gpus]
+* [TensorFlow GPU Install][tensorflow-gpu-install]
     
 ```shell
 # Add NVIDIA package repositories
