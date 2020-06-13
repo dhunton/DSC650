@@ -3,11 +3,11 @@ from pathlib import Path
 
 kvdb_dir = RESULTS_DIR.joinpath('kvdb')
 # Create the db_dir if it doesn't exist
-kvdb_dir .mkdir(parents=True, exist_ok=True)
-sites_kvdb = kvdb_dir .joinpath('sites.pickle')
-measurements_kvdb = kvdb_dir .joinpath('measurements.pickle')
-people_kvdb = kvdb_dir .joinpath('people.pickle')
-visits_kvdb = kvdb_dir .joinpath('visits.pickle')
+kvdb_dir.mkdir(parents=True, exist_ok=True)
+person_json = kvdb_dir.joinpath('people.json')
+visit_json = kvdb_dir.joinpath('visited.json')
+site_json = kvdb_dir.joinpath('sites.json')
+measurements_json = kvdb_dir.joinpath('measurements.json')
 
 
 class KVDB(object):

@@ -15,10 +15,10 @@ def _load_json(json_path):
 
 class DocumentDB(object):
     def __init__(self, db_path):
-        person_json = KV_DATA_DIR.joinpath('person.pickle')
-        visit_json = KV_DATA_DIR.joinpath('visited.pickle')
-        site_json = KV_DATA_DIR.joinpath('site.pickle')
-        measurements_json = KV_DATA_DIR.joinpath('measurements.pickle')
+        person_json = KV_DATA_DIR.joinpath('people.json')
+        visit_json = KV_DATA_DIR.joinpath('visited.json')
+        site_json = KV_DATA_DIR.joinpath('sites.json')
+        measurements_json = KV_DATA_DIR.joinpath('measurements.json')
 
         self._db_path = Path(db_path)
         self._db = None
