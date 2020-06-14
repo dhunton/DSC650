@@ -1,11 +1,10 @@
 from tinydb import TinyDB
 from pathlib import Path
-from dsc650.settings import PROCESSED_DATA_DIR
+from dsc650.assignments.assignment02.util import RESULTS_DIR
 import json
 import os
 
-RESULTS_DIR = PROCESSED_DATA_DIR.joinpath('assignment02')
-KV_DATA_DIR = RESULTS_DIR.joinpath('kv')
+KV_DATA_DIR = RESULTS_DIR.joinpath('kvdb')
 
 
 def _load_json(json_path):
