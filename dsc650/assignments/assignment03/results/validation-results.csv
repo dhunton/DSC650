@@ -1,0 +1,6 @@
+line_number,is_valid,info
+0,True,
+1,True,
+2,False,'Invalid' is not of type 'number'
+3,True,
+4,True,

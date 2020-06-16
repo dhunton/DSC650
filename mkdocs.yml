@@ -97,11 +97,17 @@ nav:
         - macOS: setup/macOS.md
         - Ubuntu: setup/ubuntu.md
     - Lessons:
-        - Lessons: lessons/index.md
-        - Big Data Fundamentals:
-          - Introduction: lessons/fundamentals/index.md
-          - Latency Numbers: lessons/fundamentals/latency.md
-          - Data Size: lessons/fundamentals/size.md
+        - Ten Week:
+            - Week 1: lessons/10-week/week01.md
+            - Week 2: lessons/10-week/week02.md
+            - Week 3: lessons/10-week/week03.md
+            - Week 4: lessons/10-week/week04.md
+            - Week 5: lessons/10-week/week05.md
+            - Week 6: lessons/10-week/week06.md
+            - Week 7: lessons/10-week/week07.md
+            - Week 8: lessons/10-week/week08.md
+            - Week 9: lessons/10-week/week09.md
+            - Week 10: lessons/10-week/week10.md
     - Data Sets: data/index.md
 
 # MathJax JavaScript
