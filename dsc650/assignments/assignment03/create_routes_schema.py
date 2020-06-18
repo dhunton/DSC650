@@ -41,9 +41,9 @@ def main():
         name='Route',
         namespace='edu.bellevue.dsc650',
         fields=[
-            dict(name="airline", type=airline, default={}),
-            dict(name="src_airport", type=airport, default={}),
-            dict(name="dst_airport", type="Airport", default={}),
+            dict(name="airline", type=airline, default="NONE"),
+            dict(name="src_airport", type=[airport, "null"], default="NONE"),
+            dict(name="dst_airport", type=["Airport", "null"], default="NONE"),
             dict(name='codeshare', type='boolean', default=False),
             dict(name='stops', type='int', default=0),
             dict(name='equipment', type=dict(type='array', items='string'))
