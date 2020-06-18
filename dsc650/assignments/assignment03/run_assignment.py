@@ -27,15 +27,83 @@ def validate_jsonl_data(records):
 
 def create_avro_dataset(records):
     schema_path = SCHEMA_DIR.joinpath('routes.avsc')
+
+    with open(schema_path) as f:
+        schema = json.load(f)
+    parsed_schema = parse_schema(schema)
+
     data_path = RESULTS_DIR.joinpath('routes.avro')
+    with open(data_path, 'wb') as f:
+        writer(f, parsed_schema, records)
 
 
 def create_parquet_dataset(records):
     data_path = RESULTS_DIR.joinpath('routes.parquet')
 
 
+def _airport_to_proto_obj(airport):
+    obj = routes_pb2.Airport()
+    if airport is None:
+        return None
+    if airport.get('airport_id') is None:
+        return None
+
+    obj.airport_id = airport.get('airport_id')
+    return obj
+
+
+def _airline_to_proto_obj(airline):
+    obj = routes_pb2.Airline()
+    if not airline.get('name'):
+        return None
+    if not airline.get('airline_id'):
+        return None
+
+    obj.airline_id = airline.get('airline_id')
+    obj.name = airline.get('name')
+
+    if airline.get('alias'):
+        obj.alias = airline.get('alias')
+    if airline.get('iata'):
+        obj.iata = airline.get('iata')
+    if airline.get('icao'):
+        obj.icao = airline.get('icao')
+    if airline.get('callsign'):
+        obj.callsign = airline.get('callsign')
+    if airline.get('country'):
+        obj.country = airline.get('country')
+    if airline.get('active') is not None:
+        obj.active = airline.get('active')
+
+    return obj
+
+
 def create_protobuf_dataset(records):
-    data_path = RESULTS_DIR.joinpath('routes.pb')
+    routes = routes_pb2.Routes()
+    for record in records:
+        route = routes_pb2.Route()
+        airline = _airline_to_proto_obj(record.get('airline', {}))
+        if airline:
+            route.airline.CopyFrom(airline)
+        src_airport = _airport_to_proto_obj(record.get('src_airport', {}))
+        if src_airport:
+            route.src_airport.CopyFrom(src_airport)
+        dst_airport = _airport_to_proto_obj(record.get('dst_airport', {}))
+        if dst_airport:
+            route.dst_airport.CopyFrom(dst_airport)
+        if record.get('codeshare'):
+            route.codeshare = record.get('codeshare')
+        if record.get('stops') is not None:
+            route.stops = record.get('stops')
+        if record.get('equipment'):
+            route.equipment.extend(record.get('equipment'))
+
+        route.SerializeToString()
+    #
+    # data_path = RESULTS_DIR.joinpath('routes.pb')
+    #
+    # with open(data_path, 'wb') as f:
+    #     f.write(routes.SerializeToString())
 
 
 def validate_avro_dataset_v2():
@@ -77,9 +145,9 @@ def create_hash_dirs(records):
 
 def main():
     records = read_jsonl_data()
-    create_hash_dirs(records)
-    validate_jsonl_data(records)
-    create_avro_dataset(records)
+    # create_hash_dirs(records)
+    # validate_jsonl_data(records)
+    # create_avro_dataset(records)
     create_parquet_dataset(records)
     create_protobuf_dataset(records)
     validate_avro_dataset_v2()
