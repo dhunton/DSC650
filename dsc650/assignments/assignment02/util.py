@@ -2,7 +2,7 @@ import pandas as pd
 from dsc650.settings import TIDYNOMICON_DIR
 from pathlib import Path
 
-ASSIGNMENT_DIR = Path(__file__)
+ASSIGNMENT_DIR = Path(Path(__file__).parent)
 RESULTS_DIR = ASSIGNMENT_DIR.joinpath('results')
 
 

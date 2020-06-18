@@ -1,0 +1,42 @@
+{
+  "619": {
+    "visit_id": 619,
+    "site_id": "DR-1",
+    "visit_date": "1927-02-08"
+  },
+  "622": {
+    "visit_id": 622,
+    "site_id": "DR-1",
+    "visit_date": "1927-02-10"
+  },
+  "734": {
+    "visit_id": 734,
+    "site_id": "DR-3",
+    "visit_date": "1930-01-07"
+  },
+  "735": {
+    "visit_id": 735,
+    "site_id": "DR-3",
+    "visit_date": "1930-01-12"
+  },
+  "751": {
+    "visit_id": 751,
+    "site_id": "DR-3",
+    "visit_date": "1930-02-26"
+  },
+  "752": {
+    "visit_id": 752,
+    "site_id": "DR-3",
+    "visit_date": NaN
+  },
+  "837": {
+    "visit_id": 837,
+    "site_id": "MSK-4",
+    "visit_date": "1932-01-14"
+  },
+  "844": {
+    "visit_id": 844,
+    "site_id": "DR-1",
+    "visit_date": "1932-03-22"
+  }
+}

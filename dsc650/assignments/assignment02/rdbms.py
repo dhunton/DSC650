@@ -1,8 +1,6 @@
-from dsc650.settings import PROCESSED_DATA_DIR
-from dsc650.assignments.assignment02a.util import read_person_csv, read_site_csv, read_visited_csv, read_measurements_csv
+from dsc650.assignments.assignment02.util import read_person_csv, read_site_csv, read_visited_csv, read_measurements_csv
+from dsc650.assignments.assignment02.util import RESULTS_DIR
 import sqlite3
-
-RESULTS_DIR = PROCESSED_DATA_DIR.joinpath('assignment02')
 
 
 def create_people_table(conn):
@@ -99,8 +97,7 @@ def load_measurements_table(conn):
 
 def main():
     db_path = RESULTS_DIR.joinpath('patient-info.db')
-    conn = sqlite3.connect(db_path)
-
+    conn = sqlite3.connect(str(db_path))
     load_people_table(conn)
     load_sites_table(conn)
     load_visits_table(conn)
