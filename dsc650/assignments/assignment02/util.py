@@ -2,7 +2,7 @@ import pandas as pd
 from dsc650.settings import TIDYNOMICON_DIR
 from pathlib import Path
 
-ASSIGNMENT_DIR = Path(Path(__file__).parent)
+ASSIGNMENT_DIR = Path(__file__)
 RESULTS_DIR = ASSIGNMENT_DIR.joinpath('results')
 
 
@@ -28,3 +28,4 @@ def read_visited_csv():
     csv_path = TIDYNOMICON_DIR.joinpath('visited.csv')
     df = pd.read_csv(csv_path)
     return df
+

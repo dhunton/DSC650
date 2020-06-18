@@ -1,10 +1,11 @@
 from tinydb import TinyDB
 from pathlib import Path
-from dsc650.assignments.assignment02.util import RESULTS_DIR
+from dsc650.settings import PROCESSED_DATA_DIR
 import json
 import os
 
-KV_DATA_DIR = RESULTS_DIR.joinpath('kvdb')
+RESULTS_DIR = PROCESSED_DATA_DIR.joinpath('assignment02')
+KV_DATA_DIR = RESULTS_DIR.joinpath('kv')
 
 
 def _load_json(json_path):
@@ -14,10 +15,10 @@ def _load_json(json_path):
 
 class DocumentDB(object):
     def __init__(self, db_path):
-        person_json = KV_DATA_DIR.joinpath('people.json')
-        visit_json = KV_DATA_DIR.joinpath('visited.json')
-        site_json = KV_DATA_DIR.joinpath('sites.json')
-        measurements_json = KV_DATA_DIR.joinpath('measurements.json')
+        person_json = KV_DATA_DIR.joinpath('person.pickle')
+        visit_json = KV_DATA_DIR.joinpath('visited.pickle')
+        site_json = KV_DATA_DIR.joinpath('site.pickle')
+        measurements_json = KV_DATA_DIR.joinpath('measurements.pickle')
 
         self._db_path = Path(db_path)
         self._db = None
