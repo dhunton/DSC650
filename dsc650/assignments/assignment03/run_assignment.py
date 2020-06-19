@@ -1,8 +1,5 @@
-from pathlib import Path
 import json
 from jsonschema import validate
-import pyarrow.parquet as pq
-import pandas as pd
 import gzip
 from fastavro import writer, parse_schema
 import pygeohash
@@ -20,11 +17,6 @@ def read_jsonl_data():
     return records
 
 
-def validate_jsonl_data(records):
-    schema_path = SCHEMA_DIR.joinpath('routes-schema.json')
-    validation_csv_path = RESULTS_DIR.joinpath('validation-results.csv')
-
-
 def create_avro_dataset(records):
     schema_path = SCHEMA_DIR.joinpath('routes.avsc')
 
@@ -35,10 +27,6 @@ def create_avro_dataset(records):
     data_path = RESULTS_DIR.joinpath('routes.avro')
     with open(data_path, 'wb') as f:
         writer(f, parsed_schema, records)
-
-
-def create_parquet_dataset(records):
-    data_path = RESULTS_DIR.joinpath('routes.parquet')
 
 
 def _airport_to_proto_obj(airport):
@@ -132,11 +120,6 @@ def create_protobuf_dataset(records):
         f.write(routes.SerializeToString())
 
 
-def validate_avro_dataset_v2():
-    schema_path = SCHEMA_DIR.joinpath('routesv2.avsc')
-    data_path = RESULTS_DIR.joinpath('routes.avro')
-
-
 def create_hash_dirs(records):
     geoindex_dir = RESULTS_DIR.joinpath('geoindex')
     geoindex_dir.mkdir(exist_ok=True, parents=True)
@@ -169,14 +152,18 @@ def create_hash_dirs(records):
             f.write(json_output.encode('utf-8'))
 
 
+def validate_jsonl_data(records):
+    # TODO: Add code to validate with `jsonschema`
+    schema_path = SCHEMA_DIR.joinpath('routes-schema.json')
+    validation_csv_path = RESULTS_DIR.joinpath('validation-results.csv')
+
+
 def main():
     records = read_jsonl_data()
-    # create_hash_dirs(records)
     validate_jsonl_data(records)
-    create_avro_dataset(records)
-    create_parquet_dataset(records)
-    create_protobuf_dataset(records)
-    validate_avro_dataset_v2()
+    # create_hash_dirs(records)
+    # create_avro_dataset(records)
+    # create_protobuf_dataset(records)
 
 
 if __name__ == '__main__':
