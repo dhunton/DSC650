@@ -1,8 +1,9 @@
 from tinydb import TinyDB
 from pathlib import Path
-from dsc650.assignments.assignment02.util import RESULTS_DIR
 import json
 import os
+from dsc650.assignments.assignment02.util import RESULTS_DIR
+
 
 KV_DATA_DIR = RESULTS_DIR.joinpath('kvdb')
 
@@ -14,16 +15,16 @@ def _load_json(json_path):
 
 class DocumentDB(object):
     def __init__(self, db_path):
-        person_json = KV_DATA_DIR.joinpath('people.json')
-        visit_json = KV_DATA_DIR.joinpath('visited.json')
-        site_json = KV_DATA_DIR.joinpath('sites.json')
+        people_json = KV_DATA_DIR.joinpath('people.json')
+        visited_json = KV_DATA_DIR.joinpath('visited.json')
+        sites_json = KV_DATA_DIR.joinpath('sites.json')
         measurements_json = KV_DATA_DIR.joinpath('measurements.json')
 
         self._db_path = Path(db_path)
         self._db = None
-        self._person_lookup = _load_json(person_json)
-        self._visit_lookup = _load_json(visit_json)
-        self._site_lookup = _load_json(site_json)
+        self._person_lookup = _load_json(people_json)
+        self._visit_lookup = _load_json(visited_json)
+        self._site_lookup = _load_json(sites_json)
         self._measurements_lookup = _load_json(measurements_json)
         self._load_db()
 
@@ -39,7 +40,7 @@ class DocumentDB(object):
         return measurements
 
     def _get_visit(self, visit_id):
-        visit = self._visit_lookup[str(visit_id)]
+        visit = self._visit_lookup.get(str(visit_id))
         site_id = str(visit['site_id'])
         site = self._site_lookup[site_id]
         visit['site'] = site

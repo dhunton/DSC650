@@ -28,3 +28,4 @@ def read_visited_csv():
     csv_path = TIDYNOMICON_DIR.joinpath('visited.csv')
     df = pd.read_csv(csv_path)
     return df
+

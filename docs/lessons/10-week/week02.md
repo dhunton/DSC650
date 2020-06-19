@@ -55,7 +55,7 @@ value = dict(
     visit_date='1927-02-08'
 )
 kvdb.set_value(key, value)
-retrieved_value kvdb.get_value(key)
+retrieved_value = kvdb.get_value(key)
 # Retrieved should be the same as value
 ```
 

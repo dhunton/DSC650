@@ -1,0 +1,17 @@
+{
+  "DR-1": {
+    "site_id": "DR-1",
+    "latitude": -49.85,
+    "longitude": -128.57
+  },
+  "DR-3": {
+    "site_id": "DR-3",
+    "latitude": -47.15,
+    "longitude": -126.72
+  },
+  "MSK-4": {
+    "site_id": "MSK-4",
+    "latitude": -48.87,
+    "longitude": -123.4
+  }
+}
