@@ -1,0 +1,152 @@
+{
+  "type": "record",
+  "name": "Route",
+  "namespace": "edu.bellevue.dsc650",
+  "fields": [
+    {
+      "name": "airline",
+      "type": {
+        "type": "record",
+        "name": "Airline",
+        "fields": [
+          {
+            "name": "airline_id",
+            "type": "int",
+            "default": -1
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "default": "NONE"
+          },
+          {
+            "name": "alias",
+            "type": "string",
+            "default": "NONE"
+          },
+          {
+            "name": "iata",
+            "type": "string",
+            "default": "NONE"
+          },
+          {
+            "name": "icao",
+            "type": "string",
+            "default": "NONE"
+          },
+          {
+            "name": "callsign",
+            "type": "string",
+            "default": "NONE"
+          },
+          {
+            "name": "country",
+            "type": "string",
+            "default": "NONE"
+          },
+          {
+            "name": "active",
+            "type": "boolean",
+            "default": false
+          }
+        ]
+      },
+      "default": "NONE"
+    },
+    {
+      "name": "src_airport",
+      "type": [
+        {
+          "type": "record",
+          "name": "Airport",
+          "fields": [
+            {
+              "name": "airport_id",
+              "type": "int",
+              "default": -1
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "default": "NONE"
+            },
+            {
+              "name": "city",
+              "type": "string",
+              "default": "NONE"
+            },
+            {
+              "name": "iata",
+              "type": "string",
+              "default": "NONE"
+            },
+            {
+              "name": "icao",
+              "type": "string",
+              "default": "NONE"
+            },
+            {
+              "name": "latitude",
+              "type": "double"
+            },
+            {
+              "name": "longitude",
+              "type": "double"
+            },
+            {
+              "name": "timezone",
+              "type": "double"
+            },
+            {
+              "name": "dst",
+              "type": "string",
+              "default": "NONE"
+            },
+            {
+              "name": "tz_id",
+              "type": "string",
+              "default": "NONE"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "default": "NONE"
+            },
+            {
+              "name": "source",
+              "type": "string",
+              "default": "NONE"
+            }
+          ]
+        },
+        "null"
+      ],
+      "default": "NONE"
+    },
+    {
+      "name": "dst_airport",
+      "type": [
+        "Airport",
+        "null"
+      ],
+      "default": "NONE"
+    },
+    {
+      "name": "codeshare",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "name": "stops",
+      "type": "int",
+      "default": 0
+    },
+    {
+      "name": "equipment",
+      "type": {
+        "type": "array",
+        "items": "string"
+      }
+    }
+  ]
+}

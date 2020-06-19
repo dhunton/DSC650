@@ -21,6 +21,14 @@ def read_airlines():
         true_values=['Y', 'y'],
         false_values=['N', 'n']
     )
+    df['alias'] = df['alias'].replace('\\N', None)
+    df['iata'] = df['iata'].replace('\\N', None)
+    df['icao'] = df['icao'].replace('\\N', None)
+    df['callsign'] = df['callsign'].replace('\\N', None)
+    df['country'] = df['country'].replace('\\N', None)
+    df = df.astype(
+        dict(alias='str', iata='str', icao='str', callsign='str', country='str')
+    )
     return df
 
 
@@ -36,6 +44,8 @@ def read_airports():
         csv_path,
         names=names
     )
+    df = df.replace('\\N', None)
+    df = df.astype(dict(timezone='float32'))
     return df
 
 
@@ -105,12 +115,19 @@ def create_jsonl_dataset():
             except ValueError:
                 dst_airport_id = -1
 
+            equipment_value = str(route.get('equipment'))
+
+            if equipment_value:
+                equipment = equipment_value.split(' ')
+            else:
+                equipment = []
+
             record = dict(
                 airline=airline_lookup.get(airline_id),
                 src_airport=airport_lookup.get(src_airport_id),
                 dst_airport=airport_lookup.get(dst_airport_id),
                 codeshare=route['codeshare'],
-                equipment=str(route['equipment']).split(' ')
+                equipment=equipment
             )
             f.write(json.dumps(record))
             f.write('\n')
