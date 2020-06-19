@@ -118,7 +118,7 @@ The `dsc650/assignments/assignment04` folder contains partially completed code a
 
 ### Assignment 4.1
 
-The first part of the is to implement a single function that takes the path to an email file and returns a dictionary containing the fields listed in the previous table. 
+The first part of the assignment is to implement a single function that takes the path to an email file and returns a dictionary containing the fields listed in the previous table. 
 
 The folder `dsc650/assignments/assignment04/examples` contains examples of messages with both plain and HTML message payloads. It is recommended that you start by parsing these examples first to ensure your `read_email` function is working properly.  
 
@@ -126,7 +126,7 @@ The folder `dsc650/assignments/assignment04/examples` contains examples of messa
 
 Next, you will be creating a workflow using the [Luigi][luigi-docs] Python library. This assignment uses Luigi because it is a self-contained Python package and does not require any additional configuration to run. There are many other workflow managers including [Apache Airflow][apache-airflow], [Apache Oozie][apache-oozie], [LinkedIn's Azkaban][azkaban], [Netflix's Conductor][conductor], and [Argo for Kubernetes][argo]. 
 
-Luigi, like most workflow engines, breaks workflows into discrete tasks. Individual tasks chain together into workflows by telling the workflow engine which tasks depend on one another. These task dependencies take the form of a [directed acyclic graph \(DAG\)][dag]. While this may sound complicated, a DAG is a flowchart of which tasks should be executed in what order (the order means it is directed) with the constraint that later tasks cannot loop back and depend on earlier tasks (hence the acyclic requirement). Read the [Luigi documentation on its execution model][luigi-execution] for more information. 
+Luigi, like most workflow engines, breaks workflows into discrete tasks. Individual tasks chain together into workflows by telling the workflow engine which tasks depend on one another. These task dependencies take the form of a [directed acyclic graph][dag](DAG). While this may sound complicated, a DAG is a flowchart of which tasks should be executed in what order (the order means it is directed) with the constraint that later tasks cannot loop back and depend on earlier tasks (hence the acyclic requirement). Read the [Luigi documentation on its execution model][luigi-execution] for more information. 
 
 To start with, you will have one [wrapper task](https://luigi.readthedocs.io/en/stable/luigi_patterns.html#triggering-many-tasks) that triggers a task to process each folder. Later, we will add tasks that process the outputs of those tasks. The following code provides a rough outline of this workflow. 
 
