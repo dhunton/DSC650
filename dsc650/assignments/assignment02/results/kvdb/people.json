@@ -1,0 +1,27 @@
+{
+  "danforth": {
+    "person_id": "danforth",
+    "personal_name": "Frank",
+    "family_name": "Danforth"
+  },
+  "dyer": {
+    "person_id": "dyer",
+    "personal_name": "William",
+    "family_name": "Dyer"
+  },
+  "lake": {
+    "person_id": "lake",
+    "personal_name": "Anderson",
+    "family_name": "Lake"
+  },
+  "pb": {
+    "person_id": "pb",
+    "personal_name": "Frank",
+    "family_name": "Pabodie"
+  },
+  "roe": {
+    "person_id": "roe",
+    "personal_name": "Valentina",
+    "family_name": "Roerich"
+  }
+}
