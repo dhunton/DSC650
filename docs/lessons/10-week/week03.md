@@ -168,7 +168,7 @@ When decompressed, the output should have the following directory structure.
 ```
 ├── __init__.py
 ├── results
-│   ├── comparison.md
+│   ├── comparison.csv
 │   ├── geoindex
 │   ├── routes.avro
 │   ├── routes.parquet
