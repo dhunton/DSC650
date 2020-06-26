@@ -267,7 +267,7 @@ The reduce phase sorts each of the mapper outputs by their keys and combines.  T
 ```
 reducer(
  (the, 1), (the, 1), (the, 1), (the, 1)
-) -> (the, 3)
+) -> (the, 4)
 reducer(
     (data, 1), (data, 1), (data, 1), (data, 1), (data, 1)
 ) -> (data, 5)

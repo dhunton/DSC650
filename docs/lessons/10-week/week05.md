@@ -36,7 +36,7 @@ Implement the housing price regression model found in section 3.6 of *Deep Learn
 
 ## Submission Instructions
 
-For this assignment, you will submit a zip archive containing the contents of the `dsc650/assignments/assignment04/` directory. Use the naming convention of `assignment04_LastnameFirstname.zip` for the zip archive. You can create this archive in Bash (or a similar Unix shell) using the following commands. 
+For this assignment, you will submit a zip archive containing the contents of the `dsc650/assignments/assignment05/` directory. Use the naming convention of `assignment05_LastnameFirstname.zip` for the zip archive. You can create this archive in Bash (or a similar Unix shell) using the following commands. 
 
 ```shell
 cd dsc650/assignments
