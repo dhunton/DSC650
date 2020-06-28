@@ -8,15 +8,13 @@ from bs4 import BeautifulSoup
 from chardet.universaldetector import UniversalDetector
 import logging
 import pandas as pd
-
 from dsc650.settings import ENRON_DIR, PROCESSED_DATA_DIR
-
 logger = logging.getLogger('luigi-interface')
 
 
 def parse_html_payload(payload):
     soup = BeautifulSoup(payload, 'html.parser')
-    return soup.get_text()
+    return str(soup.get_text()).encode('utf-8').decode('utf-8')
 
 
 def read_email(email_path):
@@ -24,7 +22,6 @@ def read_email(email_path):
     result = {}
     with open(email_path, 'rb') as fp:
         msg = email.message_from_binary_file(fp, policy=default)
-
     try:
         with open(email_path) as f:
             original = f.read()
@@ -39,7 +36,6 @@ def read_email(email_path):
         encoding = detector.result['encoding']
         with open(email_path, encoding=encoding) as f:
             original = f.read()
-
     result['original_msg'] = original
     result['payload'] = msg.get_payload()
     result['text'] = parse_html_payload(result['payload'])
@@ -48,12 +44,10 @@ def read_email(email_path):
             result[key] = value
     except Exception as e:
         logger.error('Problem parsing email: {}\n{}'.format(email_path, e))
-
     try:
         result['Date'] = dateparser.parse(result['Date']).isoformat()
     except Exception as e:
         logger.error('Problem converting date: {}\n{}'.format(result.get('date'), e))
-
     return result
 
 
@@ -76,7 +70,7 @@ class ProcessMailbox(luigi.Task):
             email_files.extend([
                 Path(entry.path)
                 for entry in os.scandir(folder)
-                if entry.is_file() and entry.name.endswith('.')
+                if entry.is_file()
             ])
         return email_files
 
@@ -127,7 +121,7 @@ class ProcessMailbox(luigi.Task):
         df['Date'] = pd.to_datetime(df['Date'], infer_datetime_format=True, utc=True)
         df['username'] = mailbox_name
         df = df[columns]
-        df.to_parquet(output_path, index=False)
+        df.to_parquet(output_path, index=False, compression=None)
 
 
 class ProcessEnronEmails(luigi.WrapperTask):
@@ -137,7 +131,7 @@ class ProcessEnronEmails(luigi.WrapperTask):
     def requires(self):
         directories = [
             entry.path
-            for entry in os.scandir(str(self.emails_directory ))
+            for entry in os.scandir(str(self.emails_directory))
             if entry.is_dir() and not entry.name.startswith('.')
         ]
         for directory in directories:
@@ -150,9 +144,10 @@ class ProcessEnronEmails(luigi.WrapperTask):
 def main():
     emails_directory = str(ENRON_DIR)
     processed_directory = str(PROCESSED_DATA_DIR.joinpath('enron'))
-
     tasks = [
-        ProcessEnronEmails(emails_directory=emails_directory, processed_directory=processed_directory)
+        ProcessEnronEmails(
+            emails_directory=emails_directory,
+            processed_directory=processed_directory)
     ]
     luigi.build(tasks, workers=16, local_scheduler=True)
 
