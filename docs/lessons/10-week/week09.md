@@ -25,7 +25,7 @@ After completing this week, you should be able to:
 
 ## Assignment 9
 
-### Assignment 9.1
+### 9.1
 
 In the first part of the assignment, you will implement basic text-preprocessing functions in Python.  These functions do not need to scale to large text documents and will only need to handle small inputs. 
 
