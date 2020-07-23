@@ -109,6 +109,8 @@ nav:
             - Week 9: lessons/10-week/week09.md
             - Week 10: lessons/10-week/week10.md
     - Data Sets: data/index.md
+    - Q&A:
+        - Neural Networks: faq/neural-networks.md
 
 # MathJax JavaScript
 extra_javascript:
