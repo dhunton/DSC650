@@ -93,6 +93,7 @@ nav:
     - About: index.md
     - Setup:
         - Overview: setup/index.md
+        - Hosted: setup/hosted.md
         - Windows: setup/windows.md
         - macOS: setup/macOS.md
         - Ubuntu: setup/ubuntu.md
@@ -108,6 +109,10 @@ nav:
             - Week 8: lessons/10-week/week08.md
             - Week 9: lessons/10-week/week09.md
             - Week 10: lessons/10-week/week10.md
+        - Twelve Week: lessons/12-week/index.md
+        - Fundamentals:
+            - Latency: lessons/fundamentals/latency.md
+            - Size: lessons/fundamentals/size.md
     - Data Sets: data/index.md
     - Q&A:
         - Neural Networks: faq/neural-networks.md
