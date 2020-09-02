@@ -2,9 +2,18 @@
 
 ## Bellevue University Data Science Cluster
 
- Bellevue University hosts a [JupyterHub](https://jupyter.org/hub) instance that includes TensorFlow, PySpark, R, and other data science libraries. To access JupyterHub, start by going to https://workspace.bellevue.edu/. Download and install the VMware Horizon Client.  Login to the client using your Bellevue University username and password.
+ Bellevue University hosts a [JupyterHub](https://jupyter.org/hub) instance that includes TensorFlow, PySpark, R, and other data science libraries. To access JupyterHub, start by going to https://workspace.bellevue.edu/. Download and install the VMware Horizon Client.
+ 
+ ![Workspace Bellevue](img/workspace-bellevue.png)
+   
+ Once you have installed the client, select the *add server* option, and add `workspace.bellevue.edu`.
+ 
+ ![VMware Horizon Add Server](img/vmware-horizon-add-server.png)
+ 
+ After you add the server, login to the client using your Bellevue University username and password.
+ 
+ ![VMware Horizon Login](img/vmware-horizon-login.png)
 
-![Workspace Bellevue](img/workspace-bellevue.png)
 
  Once you log in, you should see multiple desktops which should include the *DSC Desktop*. Select the *DSC Desktop* option which should take you to a Windows virtual machine that is pre-configured to use the JupyterHub instance. 
 
