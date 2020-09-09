@@ -109,7 +109,10 @@ nav:
             - Week 8: lessons/10-week/week08.md
             - Week 9: lessons/10-week/week09.md
             - Week 10: lessons/10-week/week10.md
-        - Twelve Week: lessons/12-week/index.md
+        - Twelve Week:
+          - Week 1: lessons/12-week/week01.md
+          - Week 2: lessons/12-week/week02.md
+          - Week 3: lessons/12-week/week03.md
         - Fundamentals:
             - Latency: lessons/fundamentals/latency.md
             - Size: lessons/fundamentals/size.md
