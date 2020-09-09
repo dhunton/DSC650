@@ -54,7 +54,7 @@
 
 ### Assignment 2.1
 
- Complete the code in `kvdb.py` to implement a basic key-value database that saves its state to a json file.  Use that code to create databases that store each of CSV files by key. The json files should be stored in the `dsc650/assignments/assignment02/results/kvdb/` folder. 
+ Complete the code in `kvdb.ipynb` to implement a basic key-value database that saves its state to a json file.  Use that code to create databases that store each of CSV files by key. The json files should be stored in the `dsc650/assignments/assignment02/results/kvdb/` folder. 
 
 | Input File         | Output File         | Key           |
 | :----------------- | :------------------ | :------------ |
