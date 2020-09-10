@@ -1,7 +1,13 @@
 ---
-title: "Week 7"
+title: DSC 650 (10 Week) Week 07
+tags: dsc650, 10-week, lessons
 subtitle: "Replication and Partitioning"
 ---
+
+# Week 7
+
+[![hackmd-github-sync-badge](https://hackmd.io/hwFN4hFKT0uTfkaTXtwvqA/badge)](https://hackmd.io/hwFN4hFKT0uTfkaTXtwvqA)
+
 
 In previous lessons, we covered how to encode data in different formats and the basics of different query languages.  Now, we will discuss how to handle distributed datasets by replicated data across multiple nodes and partitioning data. 
 
