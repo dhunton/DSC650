@@ -3,6 +3,12 @@ title: "Week 8"
 subtitle: "Streaming, Messaging, and Transactions"
 ---
 
+title: DSC 650 (10 Week) Week 08
+tags: dsc650, 10-week, lessons
+
+[![hackmd-github-sync-badge](https://hackmd.io/31ia3y2lRHi1y4_tF7KYMA/badge)](https://hackmd.io/31ia3y2lRHi1y4_tF7KYMA)
+
+
 In this lesson, we will learn about real-time data streams, message systems, and transactions in distributed systems. 
 
 ## Objectives
