@@ -1,7 +1,13 @@
 ---
-title: Week 1
+title: DSC 650 (10 Week) Week 01
+tags: dsc650, 10-week, lessons
 subtitle: Introduction to Big Data and Deep Learning
 ---
+
+# Week 1
+
+[![hackmd-github-sync-badge](https://hackmd.io/6ZNkqXrbQLq1ma1zyn5fEA/badge)](https://hackmd.io/6ZNkqXrbQLq1ma1zyn5fEA)
+
 
 To paraphrase the late Douglas Adams:
 
