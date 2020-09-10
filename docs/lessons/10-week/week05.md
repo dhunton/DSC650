@@ -1,7 +1,13 @@
 ---
-title: "Week 5"
+title: DSC 650 (10 Week) Week 05
+tags: dsc650, 10-week, lessons
 subtitle: "Machine Learning Fundamentals"
 ---
+
+# Week 5
+
+[![hackmd-github-sync-badge](https://hackmd.io/bFyxA9hRTKmvxiZSDmthmw/badge)](https://hackmd.io/bFyxA9hRTKmvxiZSDmthmw)
+
 
 In this lesson you will create a batch machine-learning workflow using deep learning examples from *Deep Learning with Python*.  This workflow should be similar to real-world machine-learning workflows that you may encounter in professional or personal projects. 
 
