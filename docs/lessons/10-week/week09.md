@@ -1,7 +1,13 @@
 ---
-title: "Week 9"
+title: DSC 650 (10 Week) Week 09
+tags: dsc650, 10-week, lessons
 subtitle: "Text and Sequence Processing"
 ---
+
+# Week 9
+
+[![hackmd-github-sync-badge](https://hackmd.io/q4guECRhRHeRlaCFPirnBA/badge)](https://hackmd.io/q4guECRhRHeRlaCFPirnBA)
+
 
 In this lesson we learn how to preprocess text-based data and train deep learning models on that data.  
 
