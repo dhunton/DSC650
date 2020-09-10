@@ -1,7 +1,13 @@
 ---
-title: "Week 6"
+title: DSC 650 (10 Week) Week 06
+tags: dsc650, 10-week, lessons
 subtitle: "Computer Vision"
 ---
+
+# Week 6
+
+[![hackmd-github-sync-badge](https://hackmd.io/4SfYIO02Q8mP_DD0YZBmGg/badge)](https://hackmd.io/4SfYIO02Q8mP_DD0YZBmGg)
+
 
 In this lesson you will learn about Convolutional Neural Networks (ConvNets/CNNs). These are neural networks that are suited for a variety of image recognition tasks including image classification and object detection. 
 
