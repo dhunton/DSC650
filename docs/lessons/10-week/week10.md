@@ -1,7 +1,13 @@
 ---
-title: "Week 10"
+title: DSC 650 (10 Week) Week 10
+tags: dsc650, 10-week, lessons
 subtitle: "The Future of Big Data"
 ---
+
+# Week 10
+
+[![hackmd-github-sync-badge](https://hackmd.io/mOP28PLqQBu5DHNQcbI-Kw/badge)](https://hackmd.io/mOP28PLqQBu5DHNQcbI-Kw)
+
 
 In this lesson, we will explore the future of big data and deep learning. 
 
