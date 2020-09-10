@@ -1,7 +1,13 @@
 ---
-title: "Week 3"
+title: DSC 650 (10 Week) Week 03
+tags: dsc650, 10-week, lessons
 subtitle: "Data Structures and Encoding"
 ---
+
+# Week 3
+
+[![hackmd-github-sync-badge](https://hackmd.io/gkl9mmggTxSHPv6RDUNuqA/badge)](https://hackmd.io/gkl9mmggTxSHPv6RDUNuqA)
+
 
 In this lesson, we learn about the data structures, encodings, and schemas used to store data and data indexes.
 
