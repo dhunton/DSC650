@@ -1,7 +1,13 @@
 ---
-title: "Week 4"
+title: DSC 650 (10 Week) Week 04
+tags: dsc650, 10-week, lessons
 subtitle: "Batch Processing Workflow"
 ---
+
+# Week 4
+
+[![hackmd-github-sync-badge](https://hackmd.io/J9CmnGX8RMGZxAqrEMPBkw/badge)](https://hackmd.io/J9CmnGX8RMGZxAqrEMPBkw)
+
 
 In this lesson, you learned how to implement batch processing (i.e., not real-time) using a typical batch processing workflow techniques. You will also gain an understanding of how frameworks such as Hadoop, Spark, and TensorFlow parallelize certain computational tasks. 
 
