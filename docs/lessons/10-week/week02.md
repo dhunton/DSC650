@@ -1,7 +1,12 @@
 ---
-title: "Week 2"
+title: DSC 650 (10 Week) Week 02
+tags: dsc650, 10-week, lessons
 subtitle: "Data Models and Processing"
 ---
+
+# Week 2
+
+[![hackmd-github-sync-badge](https://hackmd.io/9K-aKcLnSyuHv4LZlorbrw/badge)](https://hackmd.io/9K-aKcLnSyuHv4LZlorbrw)
 
 In the previous lesson, we learned about the fundamentals of deep learning and data-driven systems. Now that we have a high-level overview, we will dive into examples of how to model, query, and process data using different paradigms. 
 
