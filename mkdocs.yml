@@ -99,20 +99,29 @@ nav:
         - Ubuntu: setup/ubuntu.md
     - Lessons:
         - Ten Week:
-            - Week 1: lessons/10-week/week01.md
-            - Week 2: lessons/10-week/week02.md
-            - Week 3: lessons/10-week/week03.md
-            - Week 4: lessons/10-week/week04.md
-            - Week 5: lessons/10-week/week05.md
-            - Week 6: lessons/10-week/week06.md
-            - Week 7: lessons/10-week/week07.md
-            - Week 8: lessons/10-week/week08.md
-            - Week 9: lessons/10-week/week09.md
-            - Week 10: lessons/10-week/week10.md
+          - Week 1: lessons/10-week/week01.md
+          - Week 2: lessons/10-week/week02.md
+          - Week 3: lessons/10-week/week03.md
+          - Week 4: lessons/10-week/week04.md
+          - Week 5: lessons/10-week/week05.md
+          - Week 6: lessons/10-week/week06.md
+          - Week 7: lessons/10-week/week07.md
+          - Week 8: lessons/10-week/week08.md
+          - Week 9: lessons/10-week/week09.md
+          - Week 10: lessons/10-week/week10.md
         - Twelve Week:
           - Week 1: lessons/12-week/week01.md
           - Week 2: lessons/12-week/week02.md
           - Week 3: lessons/12-week/week03.md
+          - Week 4: lessons/12-week/week04.md
+          - Week 5: lessons/12-week/week05.md
+          - Week 6: lessons/12-week/week06.md
+          - Week 7: lessons/12-week/week07.md
+          - Week 8: lessons/12-week/week08.md
+          - Week 9: lessons/12-week/week09.md
+          - Week 10: lessons/12-week/week10.md
+          - Week 11: lessons/12-week/week11.md
+          - Week 12: lessons/12-week/week12.md
         - Fundamentals:
             - Latency: lessons/fundamentals/latency.md
             - Size: lessons/fundamentals/size.md
