@@ -1,7 +1,11 @@
 ---
-title: "Week 3"
+title: DSC 650 (12 Week) Week 03
 subtitle: "Data Structures and Encoding"
+tags: dsc650, 12-week, lessons
+disqus: dsc650
 ---
+
+# Week 3
 
 In this lesson, we learn about the data structures, encodings, and schemas used to store data and data indexes.
 
@@ -29,6 +33,8 @@ After completing this week, you should be able to:
 
 ## Assignment 3
 
+
+
 For this assignment, you will be working with data from [OpenFlights][openflights].  This data was originally obtained from the [OpenFlights Github repository][openflights-repo] and a copy of the original data is found in `data/external/openflights/`. For this assignment, you will use a dataset derived from that original data. You can find this data in `data/processed/openflights/routes.jsonl.gz`.   The data is compressed with [gzip][python-gzip] and encoded in the [JSON Lines format][json-lines].  Each line represents a single airline route. 
 
 The `dsc650/assignments/assignment03` directory contains placeholder code and data outputs for this assignment. 
@@ -43,19 +49,19 @@ Create a [JSON Schema][json-schema] in the `schemas/routes-schema.json` file to 
 
 #### b. Avro
 
-Create an Avro schema in the `schemas/routes.avsc` file to describe a route and validate the data in `routes.jsonl.gz`. Use [Avro's Python library][avro-getting-started] or [fastavro][fastavro] library to create `results/routes.avro` with the schema you created.  Do not use any compression on the output at this stage. 
+Use the [fastavro][fastavro] library to create `results/routes.avro` with the schema provided. 
 
 #### c. Parquet
 
-Create a Parquet dataset in `results/routes.parquet` using [Apache Arrow][apache-arrow] and [Pandas][pandas-parquet]. Do not use any compression on the output at this stage. 
+Create a Parquet dataset in `results/routes.parquet` using [Apache Arrow][apache-arrow]. 
 
 #### d. Protocol Buffers
 
-Define a [Protocol Buffers message format][proto-language-guide] in `schemas/routes.proto`. Using the [Protocol Buffers Python tutorial][python-pb-tutorial] as a guide, compile the `routes.proto` into Python classes.  Output the generated code into `dsc650/assignment/assignment03/routes_pb2.py`. Use this generated code to create `results/routes.pb` using Protocol Buffers. Do not use any compression on the output at this stage. 
+Using the generated code found in `dsc650/assignment/assignment03/routes_pb2.py` create `results/routes.pb` using Protocol Buffers.
 
 #### e. Output Sizes
 
-Compare the output sizes of the different formats.  Populate the results in `results/comparison.csv`.
+Compare the output sizes of the different formats.  Populate the results in `results/comparison.csv`. Compare compressed and uncompressed sizes if possible. 
 
 ### Assignment 3.2
 
@@ -98,38 +104,38 @@ Using `pygeohash` create a simple index for the `routes.jsonl.gz` data using the
 ```shell 
 geoindex
 ├── 2
-│   ├── 2e
-│   │   ├── 2eg.jsonl.gz
-│   │   ├── 2ev.jsonl.gz
-│   │   └── 2ey.jsonl.gz
-│   ├── 2h
-│   │   ├── 2h5.jsonl.gz
-│   │   ├── 2hb.jsonl.gz
-│   │   └── 2hx.jsonl.gz
-│   ├── 2j
-│   │   ├── 2j0.jsonl.gz
-│   │   ├── 2j3.jsonl.gz
-│   │   ├── 2jd.jsonl.gz
+│         ├── 2e
+│         │         ├── 2eg.jsonl.gz
+│         │         ├── 2ev.jsonl.gz
+│         │         └── 2ey.jsonl.gz
+│         ├── 2h
+│         │         ├── 2h5.jsonl.gz
+│         │         ├── 2hb.jsonl.gz
+│         │         └── 2hx.jsonl.gz
+│         ├── 2j
+│         │         ├── 2j0.jsonl.gz
+│         │         ├── 2j3.jsonl.gz
+│         │         ├── 2jd.jsonl.gz
 . 
 . 
 .
-│   └── yu
-│       └── yue.jsonl.gz
+│         └── yu
+│             └── yue.jsonl.gz
 └── z
     ├── z0
-    │   ├── z08.jsonl.gz
-    │   ├── z0h.jsonl.gz
-    │   └── z0m.jsonl.gz
+    │         ├── z08.jsonl.gz
+    │         ├── z0h.jsonl.gz
+    │         └── z0m.jsonl.gz
     ├── z6
-    │   └── z6e.jsonl.gz
+    │         └── z6e.jsonl.gz
     ├── z9
-    │   └── z92.jsonl.gz
+    │         └── z92.jsonl.gz
     ├── zg
-    │   └── zgw.jsonl.gz
+    │         └── zgw.jsonl.gz
     ├── zk
-    │   └── zk9.jsonl.gz
+    │         └── zk9.jsonl.gz
     ├── zs
-    │   └── zs4.jsonl.gz
+    │         └── zs4.jsonl.gz
     └── zu
         └── zu3.jsonl.gz
 ```
@@ -144,13 +150,13 @@ pygeohash.geohash_approximate_distance('bcd3u', 'bc83n')
 # >>> 625441
 ``` 
 
-#### c.  Evolve the Protocol Buffers and Avro Schemas
-
-Protocol Buffers, Avro, and Parquet all allow for schema evolution. Create an updated Avro schemas that include the field `geohash` for source and destination airports.   Create this in the `schemas` directory as `routesv2.avsc`. Use this new schema to validate the previously created `routes.avro` dataset. If you evolved your schema correctly, the new schema should be backward compatible. 
-
 ## Submission Instructions
 
-For this assignment, you will submit a zip archive containing the contents of the `dsc650/assignments/assignment03/` directory. Use the naming convention of `assignment03_LastnameFirstname.zip` for the zip archive. You can create this archive in Bash (or a similar Unix shell) using the following commands. 
+For this assignment, you will submit a zip archive containing the contents of the `dsc650/assignments/assignment03/` directory. Use the naming convention of `assignment03_LastnameFirstname.zip` for the zip archive. 
+
+If you are using Jupyter, you can create a zip archive by running the `Package Assignments.ipynb` notebook. 
+
+You can create this archive in Bash (or a similar Unix shell) using the following commands. 
 
 ```shell
 cd dsc650/assignments
@@ -162,31 +168,6 @@ Likewise, you can create a zip archive using Windows PowerShell with the followi
 ```shell
 Compress-Archive -Path assignment03 -DestinationPath 'assignment03_DoeJane.zip
 ```
-
-When decompressed, the output should have the following directory structure. 
-
-```
-├── __init__.py
-├── results
-│   ├── comparison.csv
-│   ├── geoindex
-│   ├── routes.avro
-│   ├── routes.parquet
-│   ├── routes.pb
-│   └── validation-results.csv
-├── routes_pb2.py
-├── routesv2_pb2.py
-├── run_assignment.py
-├── schemas
-│   ├── routes-schema.json
-│   ├── routes.avsc
-│   ├── routes.proto
-│   ├── routesv2.avsc
-│   └── routesv2.proto
-└── util.py
-```
-
-Your assignment may also contain additional files depending on you choose to implement your code. 
 
 ## Discussion
 
