@@ -1,7 +1,13 @@
 ---
- title: "Week 2"
- subtitle: "Data Models and Processing"
+title: DSC 650 (12 Week) Week 02
+tags: dsc650, 12-week, lessons
+subtitle: "Data Models and Processing"
 ---
+
+# Week 2
+
+[![hackmd-github-sync-badge](https://hackmd.io/IOgTTZKvTe2Atiq2sdvt5w/badge)](https://hackmd.io/IOgTTZKvTe2Atiq2sdvt5w)
+
 
  In the previous lesson, we learned about the fundamentals of deep learning and data-driven systems. Now that we have a high-level overview, we will dive into examples of how to model, query, and process data using different paradigms. 
 
@@ -176,16 +182,16 @@
  LIMIT 10
 ```
 
- Modify the query so that the column order is `date`, `event`, and `eventLabel` instead of `event`, `eventLabel`, and `date. Download the results as a JSON file and copy the results to `dsc650/assignments/assignment02/results/wikidata-query.json`.  
+ Modify the query so that the column order is `date`, `event`, and `eventLabel` instead of `event`, `eventLabel`, and `date`. Download the results as a JSON file and copy the results to `dsc650/assignments/assignment02/results/wikidata-query.json`. 
 
 
 ## Submission Instructions
 
- For this assignment, you will submit a zip archive containing the contents of the `dsc650/assignments/assignment02/` directory. Use the naming convention of `assignment02_LastnameFirstname.zip` for the zip archive.
+For this assignment, you will submit a zip archive containing the contents of the `dsc650/assignments/assignment02/` directory. Use the naming convention of `assignment02_LastnameFirstname.zip` for the zip archive.
 
- If you are using Jupyter, you can create a zip archive by running the `Package Assignments.ipynb` notebook. 
+If you are using Jupyter, you can create a zip archive by running the `Package Assignments.ipynb` notebook. 
 
- You can create this archive on your local machine using Bash (or a similar Unix shell) using the following commands. 
+You can create this archive on your local machine using Bash (or a similar Unix shell) using the following commands. 
 
 ```shell
  cd dsc650/assignments
