@@ -1,7 +1,13 @@
 ---
-title: "Week 5"
+title: DSC 650 (12 Week) Week 05
+tags: dsc650, 12-week, lessons
 subtitle: "Machine Learning Fundamentals"
 ---
+
+# Week 5
+
+[![hackmd-github-sync-badge](https://hackmd.io/BEx2SHHWQXGvtj-9WBlGTA/badge)](https://hackmd.io/BEx2SHHWQXGvtj-9WBlGTA)
+
 
 In this lesson you will create a batch machine-learning workflow using deep learning examples from *Deep Learning with Python*.  This workflow should be similar to real-world machine-learning workflows that you may encounter in professional or personal projects. 
 
@@ -20,23 +26,27 @@ After completing this week, you should be able to:
 
 ## Assignment 5
 
-In this assignment, you will be reproducing the models described in the examples from chapter three of *Deep Learning with Python*. You will use that code to create a Luigi pipeline that trains the model, uses the model to perform model validation, and output model metrics. 
+In this assignment, you will be reproducing the models described in the examples from chapter three of *Deep Learning with Python*. You will use that code to create a workflow that trains the model, uses the model to perform model validation, and output model metrics. 
 
 ### Assignment 5.1
 
-Implement the movie review classifier found in section 3.4 of *Deep Learning with Python* as a Luigi workflow. Example code and results can be found in `dsc650/assignments/assignment05/`.  
+Implement the movie review classifier found in section 3.4 of *Deep Learning with Python*. Example code and results can be found in `dsc650/assignments/assignment05/`.
 
 ### Assignment 5.2 
 
-Implement the news classifier found in section 3.5 of *Deep Learning with Python* as a Luigi workflow. Example code and results can be found in `dsc650/assignments/assignment05/`.  
+Implement the news classifier found in section 3.5 of *Deep Learning with Python*. Example code and results can be found in `dsc650/assignments/assignment05/`.
 
 ### Assignment 5.3
 
-Implement the housing price regression model found in section 3.6 of *Deep Learning with Python* as a Luigi workflow. Example code and results can be found in `dsc650/assignments/assignment05/`.  
+Implement the housing price regression model found in section 3.6 of *Deep Learning with Python*. Example code and results can be found in `dsc650/assignments/assignment05/`.
 
 ## Submission Instructions
 
-For this assignment, you will submit a zip archive containing the contents of the `dsc650/assignments/assignment05/` directory. Use the naming convention of `assignment05_LastnameFirstname.zip` for the zip archive. You can create this archive in Bash (or a similar Unix shell) using the following commands. 
+For this assignment, you will submit a zip archive containing the contents of the `dsc650/assignments/assignment05/` directory. Use the naming convention of `assignment05_LastnameFirstname.zip` for the zip archive. 
+
+If you are using Jupyter, you can create a zip archive by running the `Package Assignments.ipynb` notebook. 
+
+You can create this archive in Bash (or a similar Unix shell) using the following commands. 
 
 ```shell
 cd dsc650/assignments
