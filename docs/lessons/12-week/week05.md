@@ -6,7 +6,7 @@ subtitle: "Machine Learning Fundamentals"
 
 # Week 5
 
-[![hackmd-github-sync-badge](https://hackmd.io/BEx2SHHWQXGvtj-9WBlGTA/badge)](https://hackmd.io/BEx2SHHWQXGvtj-9WBlGTA)
+![hackmd-github-sync-badge](https://hackmd.io/BEx2SHHWQXGvtj-9WBlGTA/badge)](https://hackmd.io/BEx2SHHWQXGvtj-9WBlGTA)
 
 
 In this lesson you will create a batch machine-learning workflow using deep learning examples from *Deep Learning with Python*.  This workflow should be similar to real-world machine-learning workflows that you may encounter in professional or personal projects. 
