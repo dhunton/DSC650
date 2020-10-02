@@ -30,15 +30,15 @@ In this assignment, you will be reproducing the models described in the examples
 
 ### Assignment 5.1
 
-Implement the movie review classifier found in section 3.4 of *Deep Learning with Python*. Example code and results can be found in `dsc650/assignments/assignment05/`.
+Implement the movie review classifier found in section 3.4 of *Deep Learning with Python*. 
 
 ### Assignment 5.2 
 
-Implement the news classifier found in section 3.5 of *Deep Learning with Python*. Example code and results can be found in `dsc650/assignments/assignment05/`.
+Implement the news classifier found in section 3.5 of *Deep Learning with Python*. 
 
 ### Assignment 5.3
 
-Implement the housing price regression model found in section 3.6 of *Deep Learning with Python*. Example code and results can be found in `dsc650/assignments/assignment05/`.
+Implement the housing price regression model found in section 3.6 of *Deep Learning with Python*. 
 
 ## Submission Instructions
 
