@@ -1,7 +1,12 @@
 ---
-title: "Week 7"
+title: DSC 650 (12 Week) Week 07
+tags: dsc650, 12-week, lessons
 subtitle: "Replication and Partitioning"
 ---
+
+[![hackmd-github-sync-badge](https://hackmd.io/oszN76ysSVKXtCW5ghJmvg/badge)](https://hackmd.io/oszN76ysSVKXtCW5ghJmvg)
+
+# Week 7
 
 In previous lessons, we covered how to encode data in different formats and the basics of different query languages.  Now, we will discuss how to handle distributed datasets by replicated data across multiple nodes and partitioning data. 
 
@@ -105,18 +110,19 @@ hash
 #### c. 
 
 Finally, we will simulate multiple geographically distributed data centers. For this example, we will assume we have three data centers located in the western, central, and eastern United States.  Google lists the [locations of their data centers][google-datacenters] and we will use the following locations for our three data centers. 
+
 * West
-    * The Dalles, Oregon
-    * Latitude: 45.5945645
-    * Longitude: -121.1786823
+  * The Dalles, Oregon
+  * Latitude: 45.5945645
+  * Longitude: -121.1786823
 * Central
-    * Papillion, NE
-    * Latitude: 41.1544433
-    * Longitude: -96.0422378
+  * Papillion, NE
+  * Latitude: 41.1544433
+  * Longitude: -96.0422378
 * East
-    * Loudoun County, Virginia
-    * Latitude: 39.08344
-    * Longitude: -77.6497145
+  * Loudoun County, Virginia
+  * Latitude: 39.08344
+  * Longitude: -77.6497145
 
 Assume that you have an application that provides routes for each of the source airports and you want to store routes in the data center closest to the source airport.  The output folders should look as follows. 
 
