@@ -1,78 +1,51 @@
 ---
-title: "Week 9"
-subtitle: "Text and Sequence Processing"
+title: DSC 650 (12 Week) Week 09
+tags: dsc650, 12-week, lessons
+subtitle: "Streaming, Messaging, and Transactions"
 ---
 
-In this lesson we learn how to preprocess text-based data and train deep learning models on that data.  
+# Week 9
+
+In this lesson, we will learn about real-time data streams, message systems, and transactions in distributed systems. 
 
 ## Objectives
 
 After completing this week, you should be able to:
 
-* Transform text input into tokens and convert those tokens into numeric vectors using one-hot encoding and feature hashing.
-* Build basic text-processing models using recurrent neural networks (RNN)
-* Understand how word embeddings such as Word2Vec can help improve the performance of text-processing models
+* Implement scalable stream processing in Spark
+* Explain different approaches to transactions in distributed systems and the associated trade-offs
 
 ## Readings
 
-* Read chapter 6 in *Deep Learning with Python*
+* Read chapter 11 in *Designing Data-Intensive Applications*
+* *(Optional)* Read chapters 8 in *Designing Data-Intensive Applications*
 
 ## Weekly Resources
 
-* [Global Vectors for Word Representation][glove]
-* [Large Movie Review Dataset][large-movie-dataset]
-* [Extracting, transforming and selecting features][spark-ml-features]
+* [etcd][etcd]
+* [Kafka Use Cases][kafka-use-cases]
+* [Kafka Introduction][kafka-introduction]
+* [The Log: What every software engineer should know about real-time data's unifying abstraction][kafka-the-log]
+* [RabbitMQ Semantics][rabbitmq-semantics]
+* [Representational State Transfer (REST)][fielding-rest]
+* [Spark Structured Streaming][spark-structured-streaming]
+* [Zookeeper][zookeeper]
 
 ## Assignment 9
 
-### 9.1
+In the second part of the exercise, you will create two streaming dataframes using the `accelerations` and `locations` folders. 
 
-In the first part of the assignment, you will implement basic text-preprocessing functions in Python.  These functions do not need to scale to large text documents and will only need to handle small inputs. 
+### Assignment 9.1
 
-#### a. 
+Start by creating a simple Spark Streaming application that reads data from the `accelerations` and `locations` topics and uses the Kafka sink to save the results to `lastnameFirstname-simple`. 
 
-Create a `tokenize` function that splits a sentence into words. Ensure that your tokenizer removes basic punctuation. 
+### Assignment 9.2
 
-```python
-def tokenize(sentence):
-    tokens = []
-    # tokenize the sentence
-    return tokens
-````
+Define a watermark on both dataframes using the `timestamp` column. Set the threshold for the watermark at "30 seconds". Set a window of "15 seconds" and compute the mean speed of each route. Save the results in `lastnameFirstname-windowed` and set the output mode to `update`.
 
-#### b.  
+### Assignment 9.3
 
-Implement an `ngram` function that splits tokens into N-grams. 
-
-```python
-def ngram(tokens, n):
-    ngrams = []
-    # Create ngrams
-    return ngrams
-```
-
-#### c.  
-
-Implement an `one_hot_encode` function to create a vector from a numerical vector from a list of tokens. 
-
-```python
-def one_hot_encode(tokens, num_words):
-    token_index = {}
-    results = ''
-    return results
-```
-
-### 9.2
-
-Using listings 6.16, 6.17, and 6.18 in *Deep Learning with Python* as a guide, train a sequential model with embeddings on the IMDB data found in `data/external/imdb/`. Save the model performance metrics and training and validation accuracy curves in the `dsc650/assignments/assignment9/results/model_1` directory. 
-
-### 9.3
-
-Using listing 6.27 in *Deep Learning with Python* as a guide, fit the same data with an LSTM layer. Save the model performance metrics and training and validation accuracy curves in the `dsc650/assignments/assignment9/results/model_2` directory. 
-
-### 9.4
-
-Using listing 6.46 in *Deep Learning with Python* as a guide, fit the same data with a simple 1D convnet. Save the model performance metrics and training and validation accuracy curves in the `dsc650/assignments/assignment09/results/model_3` directory. 
+Join the two streams together on the ride ID as an inner join.  Save the results in `lastnameFirstname-joined`. 
 
 ## Submission Instructions
 
@@ -80,7 +53,7 @@ For this assignment, you will submit a zip archive containing the contents of th
 
 ```shell
 cd dsc650/assignments
-zip -r assignment09_DoeJane.zip assignment09
+zip -r assignment09_DoeJane.zip assignment08
 ```
 
 Likewise, you can create a zip archive using Windows PowerShell with the following command. 
@@ -93,15 +66,14 @@ Compress-Archive -Path assignment09 -DestinationPath 'assignment09_DoeJane.zip
 
 For this discussion, pick one of the following topics and write a 250 to 750-word discussion board post. Use the DSC 650 Slack channel for discussion and replies.  For grading purposes, copy and paste your initial post and at least two replies to the Blackboard discussion board. 
 
-### Topic 1
+Describe how different database systems handle transactions.  Pick three or more different systems to compare and contrast.
 
-Compare and contrast using MapReduce, Spark, and Deep Learning Frameworks (e.g. TensorFlow) for performing text preprocessing and building text-based models. Are there use cases where it makes sense to use one over another? 
-
-### Topic 2
-
-How might you combine stream processing such as Spark's stream processing framework with deep learning models? Provide use cases that are relevant to your professional or personal interests. 
-
-
-[glove]: https://nlp.stanford.edu/projects/glove/
-[large-movie-dataset]: https://ai.stanford.edu/~amaas/data/sentiment/
-[spark-ml-features]: http://spark.apache.org/docs/latest/ml-features.html 
+[berkeley-deepdrive]: https://bdd-data.berkeley.edu/
+[etcd]: https://etcd.io/
+[fielding-rest]: https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
+[kafka-the-log]: https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying
+[kafka-use-cases]: https://kafka.apache.org/uses
+[kafka-introduction]: https://kafka.apache.org/intro
+[rabbitmq-semantics]: https://www.rabbitmq.com/semantics.html]
+[spark-structured-streaming]: http://spark.apache.org/docs/latest/structured-streaming-programming-guide.html
+[zookeeper]: https://zookeeper.apache.org/
