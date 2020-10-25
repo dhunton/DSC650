@@ -149,15 +149,11 @@ Kafka and other data systems make heavy use of the log data structure. What is t
  
 ### Topic 2
 
-[Representational State Transfer \(REST\)][fielding-rest] is a software architectural style often used to create web services. One of the key properties of REST is an emphasis on not sharing state between the client and the server application. As Roy Fielding explained in his doctoral dissertation: 
+[Representational State Transfer (REST)][fielding-rest] is a software architectural style often used to create web services. One of the key properties of REST is an emphasis on not sharing state between the client and the server application. As Roy Fielding explained in his doctoral dissertation: 
 
 > We next add a constraint to the client-server interaction: communication must be stateless in nature, as in the client-stateless-server (CSS) style of Section 3.4.3 (Figure 5-3), such that each request from the client to server must contain all of the information necessary to understand the request, and cannot take advantage of any stored context on the server. Session state is therefore kept entirely on the client.
 
 How does this style of architecture compare to synchronous architectures such as an AMQP message broker? What properties of REST make it suitable for web-scale applications? 
-
-### Topic 3
-
-Describe how different database systems handle transactions.  Pick three or more different systems to compare and contrast.  
 
 [berkeley-deepdrive]: https://bdd-data.berkeley.edu/
 [etcd]: https://etcd.io/
