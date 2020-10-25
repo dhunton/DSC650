@@ -4,8 +4,6 @@ tags: dsc650, 12-week, lessons
 subtitle: "Streaming, Messaging, and Transactions"
 ---
 
-[![hackmd-github-sync-badge](https://hackmd.io/JO2hUoblRyG8GwnZLc4fxg/badge)](https://hackmd.io/JO2hUoblRyG8GwnZLc4fxg)
-
 # Week 8
 
 In this lesson, we will learn about real-time data streams, message systems, and transactions in distributed systems. 
@@ -31,7 +29,7 @@ After completing this week, you should be able to:
 * [Kafka Introduction][kafka-introduction]
 * [The Log: What every software engineer should know about real-time data's unifying abstraction][kafka-the-log]
 * [RabbitMQ Semantics][rabbitmq-semantics]
-* [Representational State Transfer (REST)][fielding-rest]
+* [Representational State Transfer \(REST\)][fielding-rest]
 * [Spark Structured Streaming][spark-structured-streaming]
 * [Zookeeper][zookeeper]
 
@@ -90,6 +88,8 @@ bdd
 ```
 
 In this example, the folder `t=000.0` is the start of the simulated data.  The folder `t=052.2` is 52.2 seconds into the simulation and `t=128.8` is 128.8 seconds into the simulation.
+
+### Assignment 8
 
 The first part of the assignment involves creating a Jupyter notebook that mimics a real-time streaming data feed. The basic loop for the notebook is simple.  The notebook should load each of the processed directories in the appropriate time order. For example, once your notebook has passed the 52.5-second mark it should load the data from the `t=052.5` directory and publish it to the appropriate Kafka topic. 
 
