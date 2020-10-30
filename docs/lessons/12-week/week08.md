@@ -29,7 +29,7 @@ After completing this week, you should be able to:
 * [Kafka Introduction][kafka-introduction]
 * [The Log: What every software engineer should know about real-time data's unifying abstraction][kafka-the-log]
 * [RabbitMQ Semantics][rabbitmq-semantics]
-* [Representational State Transfer \(REST\)][fielding-rest]
+* [Representational State Transfer (REST)][fielding-rest]
 * [Spark Structured Streaming][spark-structured-streaming]
 * [Zookeeper][zookeeper]
 
