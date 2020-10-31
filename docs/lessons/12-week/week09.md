@@ -37,15 +37,15 @@ In the second part of the exercise, you will create two streaming dataframes usi
 
 ### Assignment 9.1
 
-Start by creating a simple Spark Streaming application that reads data from the `accelerations` and `locations` topics and uses the Kafka sink to save the results to `lastnameFirstname-simple`. 
+Start by creating a simple Spark Streaming application that reads data from the `accelerations` and `locations` topics and uses the Kafka sink to save the results to the `LastnameFirstname-simple` topic. 
 
 ### Assignment 9.2
 
-Define a watermark on both dataframes using the `timestamp` column. Set the threshold for the watermark at "30 seconds". Set a window of "15 seconds" and compute the mean speed of each route. Save the results in `lastnameFirstname-windowed` and set the output mode to `update`.
+Define a watermark on the locations and accelerations dataframe using the `timestamp` column. Set the threshold for the watermark at "30 seconds". Set a window of "15 seconds" and compute the mean speed of each ride defined by the `ride_id`. Save the results in `LastnameFirstname-windowed` and set the output mode to `update`.
 
 ### Assignment 9.3
 
-Join the two streams together on the ride ID as an inner join.  Save the results in `lastnameFirstname-joined`. 
+Join the two streams together on the `ride_id` as an inner join.  Save the results in `LastnameFirstname-joined`. 
 
 ## Submission Instructions
 

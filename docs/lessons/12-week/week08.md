@@ -29,7 +29,7 @@ After completing this week, you should be able to:
 * [Kafka Introduction][kafka-introduction]
 * [The Log: What every software engineer should know about real-time data's unifying abstraction][kafka-the-log]
 * [RabbitMQ Semantics][rabbitmq-semantics]
-* [Representational State Transfer \(REST\)][fielding-rest]
+* [Representational State Transfer (REST)][fielding-rest]
 * [Spark Structured Streaming][spark-structured-streaming]
 * [Zookeeper][zookeeper]
 
@@ -91,18 +91,21 @@ In this example, the folder `t=000.0` is the start of the simulated data.  The f
 
 ### Assignment 8
 
-The first part of the assignment involves creating a Jupyter notebook that mimics a real-time streaming data feed. The basic loop for the notebook is simple.  The notebook should load each of the processed directories in the appropriate time order. For example, once your notebook has passed the 52.5-second mark it should load the data from the `t=052.5` directory and publish it to the appropriate Kafka topic. 
+The first part of the assignment involves creating a Jupyter notebook that mimics a real-time streaming data feed. The basic loop for the notebook is simple.  The notebook should load processed data and publish data at the appropriate time. You can use either the time given in the parquet partition or you can use the `offset` data found within the parquet data. For example, once your notebook has passed the 52.5-second mark it should load the data from the `t=052.5` directory and publish it to the appropriate Kafka topic. Similarly, you could example the `offset` column and publish the data at the appropriate time. 
 
-**Hint**: You may want to use the Python [heapq](https://docs.python.org/3/library/heapq.html) library as an event queue. 
+!!!hint
+    You may want to use the Python [heapq](https://docs.python.org/3/library/heapq.html) library as an event queue. 
+
+The [DSC 650 Github contains example notebooks](https://github.com/bellevue-university/dsc650/tree/master/dsc650/assignments/assignment08) you can use to help you create topics, publish data to a Kafka broker, and consume the data. 
+
 
 Use the following parameters when publishing simulated data to the Bellevue University Data Science Cluster Kafka broker. 
 
 |                      |                                             |
 | -------------------- | ------------------------------------------- |
 | Bootstrap Server     | kafka.kafka.svc.cluster.local:9092          |
-| Location Topic       | lastnameFirstname-acceleration/location     |
-| Acceleration Topic   | lastnameFirstname-acceleration/acceleration |
-| Group ID             | lastnameFirstname                           |
+| Location Topic       | LastnameFirstname-locations                 |
+| Acceleration Topic   | LastnameFirstname-accelerations             |
 
 The following code is an example of code that uses the `kafka-python` library to publish a message to Kafka topic using a JSON serializer. 
 
@@ -123,7 +126,12 @@ producer.send(
 )
 ```
 
+!!! hint
+    When creating the notebook producer, you may want to automatically restart sending the data from the beginning when you reach the end of the dataset. This enables you to continue testing without having to manually restart the notebook.
+
 The following code is an example that uses the `kafka-python` library to consume messages from a Kafka topic. You should create another Jupyter notebook to consume messages from the Kafka producer to validate that you are properly publishing messages to the appropriate topic. 
+
+
 
 ```python
 from kafka import KafkaConsumer
@@ -136,6 +144,9 @@ consumer = KafkaConsumer(
     bootstrap_servers=[bootstrap_server]
 )
 ```
+
+!!! note
+    While creating a separate notebook that acts as a Kafka consumer is not strictly necessary for the assignment, it is recommended that you create one to aid in debugging and testing. 
 
 ## Discussion Board
 
