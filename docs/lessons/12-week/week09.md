@@ -41,11 +41,11 @@ Start by creating a simple Spark Streaming application that reads data from the 
 
 ### Assignment 9.2
 
-Define a watermark on both dataframes using the `timestamp` column. Set the threshold for the watermark at "30 seconds". Set a window of "15 seconds" and compute the mean speed of each route. Save the results in `LastnameFirstname-windowed` and set the output mode to `update`.
+Define a watermark on the location dataframe using the `timestamp` column. Set the threshold for the watermark at "30 seconds". Set a window of "15 seconds" and compute the mean speed of each ride defined by the `ride_id`. Save the results in `LastnameFirstname-windowed` and set the output mode to `update`.
 
 ### Assignment 9.3
 
-Join the two streams together on the ride ID as an inner join.  Save the results in `LastnameFirstname-joined`. 
+Join the two streams together on the `ride_id` as an inner join.  Save the results in `LastnameFirstname-joined`. 
 
 ## Submission Instructions
 
