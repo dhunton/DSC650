@@ -41,7 +41,7 @@ Start by creating a simple Spark Streaming application that reads data from the 
 
 ### Assignment 9.2
 
-Define a watermark on the location dataframe using the `timestamp` column. Set the threshold for the watermark at "30 seconds". Set a window of "15 seconds" and compute the mean speed of each ride defined by the `ride_id`. Save the results in `LastnameFirstname-windowed` and set the output mode to `update`.
+Define a watermark on the locations and accelerations dataframe using the `timestamp` column. Set the threshold for the watermark at "30 seconds". Set a window of "15 seconds" and compute the mean speed of each ride defined by the `ride_id`. Save the results in `LastnameFirstname-windowed` and set the output mode to `update`.
 
 ### Assignment 9.3
 
