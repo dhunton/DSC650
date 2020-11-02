@@ -1,33 +1,81 @@
 ---
-title: "Week 10"
-subtitle: "The Future of Big Data"
+title: DSC 650 (12 Week) Week 10
+tags: dsc650, 12-week, lessons
+subtitle: "Text and Seqeuence Processing"
 ---
 
-In this lesson, we will explore the future of big data and deep learning. 
+# Week 10
+
+In this lesson we learn how to preprocess text-based data and train deep learning models on that data.  
 
 ## Objectives
 
 After completing this week, you should be able to:
 
-* Describe upcoming advances in big data and deep learning and their potential use cases
-* Experiment with advanced deep learning use cases including text and image generation
+* Transform text input into tokens and convert those tokens into numeric vectors using one-hot encoding and feature hashing.
+* Build basic text-processing models using recurrent neural networks (RNN)
+* Understand how word embeddings such as Word2Vec can help improve the performance of text-processing models
 
 ## Readings
 
-* Chapter 12 in *Designing Data-Intensive Applications*
-* Read chapters 8 and 9 in *Deep Learning with Python*
+* Read chapter 6 in *Deep Learning with Python*
 
 ## Weekly Resources
+
+* [Global Vectors for Word Representation][glove]
+* [Large Movie Review Dataset][large-movie-dataset]
+* [Extracting, transforming and selecting features][spark-ml-features]
 
 ## Assignment 10
 
 ### Assignment 10.1
 
-Using section 8.1 in *Deep Learning with Python* as a guide, implement an LSTM text generator. Train the model on the Enron corpus or a text source of your choice. Save the model and generate 20 examples to the `results` directory of `dsc650/assignments/assignment10/`.  
+In the first part of the assignment, you will implement basic text-preprocessing functions in Python.  These functions do not need to scale to large text documents and will only need to handle small inputs. 
 
-### Assignment 10.2
+#### Assignment 10.1.a
 
-Using section 8.4 in *Deep Learning with Python* as a guide, implement a variational autoencoder using the MNIST data set and save a grid of 15 x 15 digits to the `results/vae` directory. If you would rather work on a more interesting dataset, you can use the [CelebFaces Attributes Dataset](https://www.tensorflow.org/datasets/catalog/celeb_a) instead. 
+Create a `tokenize` function that splits a sentence into words. Ensure that your tokenizer removes basic punctuation. 
+
+```python
+def tokenize(sentence):
+    tokens = []
+    # tokenize the sentence
+    return tokens
+````
+
+#### Assignment 10.1.b
+
+Implement an `ngram` function that splits tokens into N-grams. 
+
+```python
+def ngram(tokens, n):
+    ngrams = []
+    # Create ngrams
+    return ngrams
+```
+
+#### Assignment 10.1.c
+
+Implement an `one_hot_encode` function to create a vector from a numerical vector from a list of tokens. 
+
+```python
+def one_hot_encode(tokens, num_words):
+    token_index = {}
+    results = ''
+    return results
+```
+
+### 10.2
+
+Using listings 6.16, 6.17, and 6.18 in *Deep Learning with Python* as a guide, train a sequential model with embeddings on the IMDB data found in `data/external/imdb/`. Produce the model performance metrics and training and validation accuracy curves within the Jupyter notebook.
+
+### 10.3
+
+Using listing 6.27 in *Deep Learning with Python* as a guide, fit the same data with an LSTM layer. Produce the model performance metrics and training and validation accuracy curves within the Jupyter notebook.
+
+### 10.4
+
+Using listing 6.46 in *Deep Learning with Python* as a guide, fit the same data with a simple 1D convnet. Produce the model performance metrics and training and validation accuracy curves within the Jupyter notebook.
 
 ## Submission Instructions
 
@@ -35,7 +83,7 @@ For this assignment, you will submit a zip archive containing the contents of th
 
 ```shell
 cd dsc650/assignments
-zip -r assignment10_DoeJane.zip assignment10
+zip -r assignment10_DoeJane.zip assignment09
 ```
 
 Likewise, you can create a zip archive using Windows PowerShell with the following command. 
@@ -46,4 +94,17 @@ Compress-Archive -Path assignment10 -DestinationPath 'assignment10_DoeJane.zip
 
 ## Discussion Board
 
-For this discussion, pick an area of big data or deep learning that we did discuss in-depth and explain why you find it exciting. Topics include, but are not limited to Kubernetes, deep learning hardware, and cloud computing. Write a 250 to 750-word discussion board post to describe this topic. Use the DSC 650 Slack channel for discussion and replies.  For grading purposes, copy and paste your initial post and at least two replies to the Blackboard discussion board. 
+For this discussion, pick one of the following topics and write a 250 to 750-word discussion board post. Use the DSC 650 Slack channel for discussion and replies.  For grading purposes, copy and paste your initial post and at least two replies to the Blackboard discussion board. 
+
+### Topic 1
+
+Compare and contrast using MapReduce, Spark, and Deep Learning Frameworks (e.g. TensorFlow) for performing text preprocessing and building text-based models. Are there use cases where it makes sense to use one over another? 
+
+### Topic 2
+
+How might you combine stream processing such as Spark's stream processing framework with deep learning models? Provide use cases that are relevant to your professional or personal interests. 
+
+
+[glove]: https://nlp.stanford.edu/projects/glove/
+[large-movie-dataset]: https://ai.stanford.edu/~amaas/data/sentiment/
+[spark-ml-features]: http://spark.apache.org/docs/latest/ml-features.html 
